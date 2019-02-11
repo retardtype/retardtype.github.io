@@ -4,16 +4,34 @@ function RartText() {
     var input = splitNChars($('#txt1').val(), 1);
     allLower(input);
     rartify(input);
-    console.log(input);
 
     var output="";
     for (var i = 0; i < input.length; i++) {
         output += input[i];
     }
-    console.log(output);
     $('#txt2').val(output);
 
 
+}
+
+function normieLower() {
+    var input = splitNChars($('#txt1').val(), 1);
+    allLower(input);
+    var output = "";
+    for (var i = 0; i < input.length; i++) {
+        output += input[i];
+    }
+    $('#txt2').val(output);
+}
+
+function normieUpper() {
+    var input = splitNChars($('#txt1').val(), 1);
+    allUpper(input);
+    var output = "";
+    for (var i = 0; i < input.length; i++) {
+        output += input[i];
+    }
+    $('#txt2').val(output);
 }
 
 
@@ -28,6 +46,12 @@ function splitNChars(txt, num) {
 function allLower(array) {
     for (var i = 0; i < array.length; i++) {
         array[i] = array[i].toString().toLowerCase();
+    }
+}
+
+function allUpper(array) {
+    for (var i = 0; i < array.length; i++) {
+        array[i] = array[i].toString().toUpperCase();
     }
 }
 

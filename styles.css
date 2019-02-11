@@ -6,8 +6,11 @@ textarea {
     text-align: start;
     padding: 10px; /*top right bottom left*/
 }
-input,h1 {
+#button,h1 {
     margin-left:10vw;
+    margin-top:1vh;
+}
+.button {
     margin-top:1vh;
 }
 
