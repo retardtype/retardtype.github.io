@@ -2,6 +2,7 @@ var trigger = false;
 
 function RartText() {
     var input = splitNChars($('#txt1').val(), 1);
+    alertMsg(input);
     allLower(input);
     rartify(input);
 
@@ -10,28 +11,33 @@ function RartText() {
         output += input[i];
     }
     $('#txt2').val(output);
+    copyFunct();
 
 
 }
 
 function normieLower() {
     var input = splitNChars($('#txt1').val(), 1);
+    alertMsg(input);
     allLower(input);
     var output = "";
     for (var i = 0; i < input.length; i++) {
         output += input[i];
     }
     $('#txt2').val(output);
+    copyFunct();
 }
 
 function normieUpper() {
     var input = splitNChars($('#txt1').val(), 1);
+    alertMsg(input);
     allUpper(input);
     var output = "";
     for (var i = 0; i < input.length; i++) {
         output += input[i];
     }
     $('#txt2').val(output);
+    copyFunct();
 }
 
 
@@ -70,4 +76,18 @@ function rartify(array) {
 
 function isLetter(str) {
     return str.length === 1 && str.match(/[a-z]/i);
+}
+
+function alertMsg(array) {
+    var myArray = ['you have the gay', 'enter something you turd', 'you are a poo-sniffer', 'your mom probably hates you, why did you give me an empty input', 'ayy lmao','erich is gay','enter something please or I will have to kill another hostage'];   
+    var rand = myArray[Math.floor(Math.random() * myArray.length)];
+    if (array.length == 0) {
+        alert(rand);
+    }
+}
+
+function copyFunct() {
+    var copyText = document.getElementById("txt2");
+    copyText.select();
+    document.execCommand("Copy");
 }
