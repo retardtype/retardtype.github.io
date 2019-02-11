@@ -1,0 +1,22 @@
+textarea {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 1vh;
+    height: 30vh;
+    text-align: start;
+    padding: 10px; /*top right bottom left*/
+}
+input,h1 {
+    margin-left:10vw;
+    margin-top:1vh;
+}
+
+
+span {
+    color:slategrey;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image:url("white_texture_@2x.png");
+}
